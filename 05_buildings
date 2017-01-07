@@ -1,0 +1,356 @@
+# city
+city = {
+  # PORT
+	ct_port_6 = {
+		desc = ct_port_1_desc
+		port = yes
+		trigger = { TECH_TRADE_PRACTICES = 6 }
+		upgrades_from = ct_port_5
+		gold_cost = 500
+		build_time = 2390
+		tax_income = 3
+		ai_creation_factor = 107
+
+		extra_tech_building_start = 0.2
+	}
+# BLACKSMITHS
+  ct_blacksmith_1 = {
+    desc = ct_blacksmith_1_desc
+    trigger = { TECH_CITY_CONSTRUCTION = 2 }
+    prerequisites = { ct_wall_1 }
+    gold_cost = 150
+    build_time = 365
+    levy_reinforce_rate = 0.1
+    ai_creation_factor = 80
+		
+		extra_tech_building_start = 10.0
+  }
+  ct_blacksmith_2 = {
+		desc = ct_blacksmith_1_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 4 }
+    prerequisites = { ct_wall_2 }
+    upgrades_from = ct_blacksmith_1
+		gold_cost = 250
+		build_time = 547
+    levy_reinforce_rate = 0.1
+    tax_income = 2
+		ai_creation_factor = 81
+		
+		extra_tech_building_start = 10.0
+	}
+  ct_blacksmith_3 = {
+		desc = ct_blacksmith_1_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 6 }
+    prerequisites = { ct_wall_3 }
+    upgrades_from = ct_blacksmith_2
+		gold_cost = 500
+		build_time = 547
+    levy_reinforce_rate = 0.1
+    tax_income = 3
+    land_morale = 0.1
+		ai_creation_factor = 82
+		
+		extra_tech_building_start = 10.0
+	}
+  # EXPEDITION CENTER 1
+	ct_expedition_center_1 = {
+		potential = {
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+				is_merchant_republic = yes
+			}
+		}
+		trigger = { TECH_TRADE_PRACTICES = 4 }
+		desc = ct_expedition_center_1_desc
+    port = yes
+		gold_cost = 400
+		build_time = 1460
+		global_supply_limit = 0.01
+    global_movement_speed = 0.01
+    tradevalue = 10
+		ai_creation_factor = 70
+
+		extra_tech_building_start = 10.0
+	}
+  
+  # EXPEDITION CENTER 2
+	ct_expedition_center_2 = {
+		potential = {
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+				is_merchant_republic = yes
+			}
+		}
+		trigger = { TECH_TRADE_PRACTICES = 5 }
+		desc = ct_expedition_center_2_desc
+    upgrades_from = ct_expedition_center_1
+    port = yes
+		gold_cost = 600
+		build_time = 1860
+		global_supply_limit = 0.02
+    global_movement_speed = 0.02
+    tradevalue = 20
+		ai_creation_factor = 71
+
+		extra_tech_building_start = 10.0
+	}
+  # EXPEDITION CENTER 3
+  	ct_expedition_center_3 = {
+		potential = {
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+				is_merchant_republic = yes
+			}
+		}
+		trigger = { TECH_TRADE_PRACTICES = 7 }
+		desc = ct_expedition_center_3_desc
+    upgrades_from = ct_expedition_center_2
+    port = yes
+		gold_cost = 1000
+		build_time = 2310
+		global_supply_limit = 0.02
+    global_movement_speed = 0.02
+    tradevalue = 40
+    tech_growth_modifier = 0.3
+		ai_creation_factor = 71
+
+		extra_tech_building_start = 10.0
+		}
+  # NATIONAL BANK 1
+	ct_national_bank_1 = {
+		potential = {
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+				is_merchant_republic = yes
+			}
+		}
+		trigger = { TECH_CITY_CONSTRUCTION = 4 }
+    prerequisites = { ct_marketplace_3 }
+		desc = ct_national_bank_1_desc
+		gold_cost = 400
+		build_time = 1000
+		global_tax_modifier = 0.1
+    monthly_character_prestige = 0.10
+		ai_creation_factor = 84
+
+		extra_tech_building_start = 10.0
+	}
+  
+  # National Bank 2
+	ct_expedition_center_2 = {
+		potential = {
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+				is_merchant_republic = yes
+			}
+		}
+		trigger = { TECH_CITY_CONSTRUCTION = 6 }
+    prerequisites = { ct_marketplace_5 }
+		desc = ct_national_bank_1_desc
+    upgrades_from = ct_expedition_center_1
+		gold_cost = 600
+		build_time = 1860
+    global_tax_modifier = 0.1
+    monthly_character_prestige = 0.20
+		ai_creation_factor = 86
+  }
+  # BROTHEL 1
+  ct_brothel_1 = {
+    desc = ct_blacksmith_1_desc
+    trigger = { TECH_CITY_CONSTRUCTION = 1 }
+    prerequisites = { ct_wall_1 }
+    gold_cost = 150
+    build_time = 280
+    tax_income = 2
+    fertility = 0.05
+    disease_defence = -0.05
+    monthly_character_piety = -0.05
+    ai_creation_factor = 60
+		
+		extra_tech_building_start = 10.0
+  }
+  # BROTHEL 2
+  ct_brothel_2 = {
+		desc = ct_brothel_2_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 2 }
+    prerequisites = { ct_wall_1 }
+    upgrades_from = ct_brothel_1
+		gold_cost = 250
+		build_time = 500
+    tax_income = 3
+    fertility = 0.1
+    disease_defence = -0.1
+    monthly_character_piety = -0.1
+		ai_creation_factor = 61
+		
+		extra_tech_building_start = 10.0
+	}
+  # BROTHEL 3
+  ct_brothel_3 = {
+		desc = ct_brothel_3_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 3 }
+    prerequisites = { ct_wall_2 }
+    upgrades_from = ct_brothel_2
+		gold_cost = 400
+		build_time = 920
+    tax_income = 4
+    fertility = 0.15
+    disease_defence = -0.15
+    monthly_character_piety = -0.1
+		ai_creation_factor = 62
+		
+		extra_tech_building_start = 10.0
+	}
+  # BROTHEL 4
+  ct_brothel_4 = {
+		desc = ct_brothel_4_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 5 }
+    prerequisites = { ct_wall_3 }
+    upgrades_from = ct_brothel_3
+		gold_cost = 600
+		build_time = 1147
+    tax_income = 6
+    fertility = 0.15
+    disease_defence = -0.2
+    monthly_character_piety = -0.15
+    monthly_character_prestige = 0.1
+		ai_creation_factor = 63
+		
+		extra_tech_building_start = 10.0
+	}
+    # PARK 1
+  ct_PARK_1 = {
+		desc = ct_park_1_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 1 }
+		gold_cost = 100
+		build_time = 215
+    fort_level = -0.1
+    monthly_character_prestige = 0.05
+		ai_creation_factor = 20
+		
+		extra_tech_building_start = 10.0
+	}
+      # PARK 2
+  ct_PARK_2 = {
+		desc = ct_park_1_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 2 }
+    upgrades_from = ct_park_1
+		gold_cost = 150
+		build_time = 447
+    fort_level = -0.1
+    monthly_character_prestige = 0.1
+		ai_creation_factor = 21
+		
+		extra_tech_building_start = 10.0
+	}
+      # PARK 3
+  ct_park_3 = {
+		desc = ct_park_1_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 3 }
+    potential = {
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+    upgrades_from = ct_park_2
+		gold_cost = 200
+		build_time = 712
+    fort_level = -0.15
+    monthly_character_prestige = 0.15
+    diplomacy = 1
+		ai_creation_factor = 22
+		
+		extra_tech_building_start = 10.0
+	}
+        # MONUMENT 1
+  ct_monument_1 = {
+		desc = ct_monument_1_desc
+		trigger = { TECH_CONSTRUCTION = 3 }
+    potential = {
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+    prerequisites = { ct_park_2 }
+		gold_cost = 400
+		build_time = 712
+    monthly_character_prestige = 0.1
+    land_organisation = 0.05
+		ai_creation_factor = 80
+		
+		extra_tech_building_start = 10.0
+	}
+          # MONUMENT 2
+  ct_monument_2 = {
+		desc = ct_monument_1_desc
+    upgrades_from = ct_monument_1
+		trigger = { TECH_CONSTRUCTION = 5 }
+    potential = {
+			FROM = { 
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+    prerequisites = { ct_park_3 }
+		gold_cost = 700
+		build_time = 1358
+    monthly_character_prestige = 0.15
+    land_organisation = 0.05
+		ai_creation_factor = 81
+		
+		extra_tech_building_start = 10.0
+	}
+  # CONSTRUCTION OFFICE 1
+  	ct_construction_office_1 = {
+		desc = ct_construction_office_1_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 3 }
+		gold_cost = 200
+		build_time = 365
+		local_build_time_modifier = -0.05
+		ai_creation_factor = 90
+		add_number_to_name = no
+		
+		extra_tech_building_start = 10.0
+	}
+  # CONSTRUCTION OFFICE 2
+  	ct_construction_office_2 = {
+    upgrades_from = ct_construction_office_1
+		desc = ct_construction_office_1_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 4 }
+		gold_cost = 300
+		build_time = 535
+		local_build_time_modifier = -0.05
+		ai_creation_factor = 91
+		add_number_to_name = no
+		
+		extra_tech_building_start = 10.0
+	}
+  # CONSTRUCTION OFFICE 3
+  	ct_construction_office_3 = {
+    upgrades_from = ct_construction_office_2
+		desc = ct_construction_office_1_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 5 }
+		gold_cost = 400
+		build_time = 810
+		local_build_time_modifier = -0.05
+		ai_creation_factor = 92
+		add_number_to_name = no
+		
+		extra_tech_building_start = 10.0
+	}
+}
